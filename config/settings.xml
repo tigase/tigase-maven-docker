@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <interactiveMode>true</interactiveMode>
+
+
+    <!-- servers
+     | This is a list of authentication profiles, keyed by the server-id used within the system.
+     | Authentication profiles can be used whenever maven must make a connection to a remote server.
+     |-->
+    <servers>
+
+        <!-- server
+         | Specifies the authentication information to use when connecting to a particular server, identified by
+         | a unique name within the system (referred to by the 'id' attribute below).
+         |
+         | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are
+         |       used together.
+         |
+        -->
+
+        <server>
+            <id>tigase</id>
+            <username>${tigase.internalrepo.username}</username>
+            <password>${tigase.internalrepo.password}</password>
+        </server>
+
+        <server>
+            <id>tigase-snapshot</id>
+            <username>${tigase.internalrepo.username}</username>
+            <password>${tigase.internalrepo.password}</password>
+        </server>
+
+        <server>
+            <id>github</id>
+            <username>${tigase.githubrepo.username}</username>
+            <password>${tigase.githubrepo.password}</password>
+        </server>
+
+
+    </servers>
+
+    <mirrors>
+    </mirrors>
+
+</settings>
